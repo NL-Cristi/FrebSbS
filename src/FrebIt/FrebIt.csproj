@@ -146,9 +146,7 @@
     <EmbeddedResource Include="Assests\2019.xsl" />
     <EmbeddedResource Include="Assests\2022.xsl" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MyDataGrid\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="document_view.ico" />
   </ItemGroup>
