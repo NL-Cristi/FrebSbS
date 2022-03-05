@@ -1,0 +1,17 @@
+C:\MyProjects\FrebIt\FrebIt\obj\Release\FrebIt.csproj.AssemblyReference.cache
+C:\MyProjects\FrebIt\FrebIt\obj\Release\FrebIt.csproj.SuggestedBindingRedirects.cache
+C:\MyProjects\FrebIt\FrebIt\obj\Release\FrebIt.Form1.resources
+C:\MyProjects\FrebIt\FrebIt\obj\Release\FrebIt.Properties.Resources.resources
+C:\MyProjects\FrebIt\FrebIt\obj\Release\FrebIt.csproj.GenerateResource.cache
+C:\MyProjects\FrebIt\FrebIt\obj\Release\FrebIt.csproj.CoreCompileInputs.cache
+C:\MyProjects\FrebIt\FrebIt\bin\Release\AdvancedDataGridView.dll
+C:\MyProjects\FrebIt\FrebIt\obj\Release\FrebIt.csproj.CopyComplete
+C:\MyProjects\FrebIt\FrebIt\bin\Release\FrebIng.exe.config
+C:\MyProjects\FrebIt\FrebIt\bin\Release\FrebIng.exe.manifest
+C:\MyProjects\FrebIt\FrebIt\bin\Release\FrebIng.application
+C:\MyProjects\FrebIt\FrebIt\bin\Release\FrebIng.exe
+C:\MyProjects\FrebIt\FrebIt\bin\Release\FrebIng.pdb
+C:\MyProjects\FrebIt\FrebIt\obj\Release\FrebIng.exe.manifest
+C:\MyProjects\FrebIt\FrebIt\obj\Release\FrebIng.application
+C:\MyProjects\FrebIt\FrebIt\obj\Release\FrebIng.exe
+C:\MyProjects\FrebIt\FrebIt\obj\Release\FrebIng.pdb
