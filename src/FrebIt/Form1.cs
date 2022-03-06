@@ -107,7 +107,7 @@ namespace FrebIt
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Something bad happened. Please report it to crnegule@microsoft.com. \nMessage : " + ex.Message + " Stack : \n" + ex.StackTrace);
+                MessageBox.Show("Something bad happened. Please report it to cristian@clamsen.com. \nMessage : " + ex.Message + " Stack : \n" + ex.StackTrace);
             }
         }
 
@@ -130,7 +130,7 @@ namespace FrebIt
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Something bad happened. Please report it to crnegule@microsoft.com. \nMessage : " + ex.Message + " Stack : \n" + ex.StackTrace);
+                MessageBox.Show("Something bad happened. Please report it to cristian@clamsen.com. \nMessage : " + ex.Message + " Stack : \n" + ex.StackTrace);
             }
         }
 
@@ -453,7 +453,7 @@ namespace FrebIt
 
         private void HelpMenu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("FrebSbs V1.0 \nFor any feedback/issue please \nreach out to crnegule@microsoft.com");
+            MessageBox.Show("FrebSbs V1.0 \nFor any feedback/issue please \nreach out to cristian@clamsen.com");
 
         }
     }
