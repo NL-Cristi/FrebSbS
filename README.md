@@ -1,9 +1,9 @@
 # FrebSbS
 
-# ![Image of FirstScreen](/Img/FrebSbS-3.jpg)   __FrebSbs__ ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/cristian-clamsen/FrebSbS?style=plastic) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/cristian-clamsen/FrebSbS/latest/total)
+# ![Image of FirstScreen](/Img/FrebSbS-3.jpg)   __FrebSbs__ ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/cristian-clamsen/FrebSbS?style=for-the-badgel) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/cristian-clamsen/FrebSbS/latest/total?style=for-the-badgel)
 
- ![GitHub all releases](https://img.shields.io/github/downloads/cristian-clamsen/FrebSbS/total?style=plastic)
- ![GitHub issues](https://img.shields.io/github/issues-raw/cristian-clamsen/FrebSbS?style=plastic)
+ ![GitHub all releases](https://img.shields.io/github/downloads/cristian-clamsen/FrebSbS/total?style=for-the-badge)
+ ![GitHub issues](https://img.shields.io/github/issues-raw/cristian-clamsen/FrebSbS?style=for-the-badge)
 
 
 
@@ -12,7 +12,7 @@ XSL files that can be used are from Windows Server 2008R2 up to 2022.
 
 ## Installation
 
-Its a stand alone exe so you only need to download the [Download LatestZIP](https://github.com//cristian-clamsen/FrebSbS/releases/latest) and extract the exe.  
+Its a stand alone exe so you only need to download the [Download LatestZIP](https:/github.com/cristian-clamsen/FrebSbS/releases/latest) and extract the exe.  
 ```bash
 FrebSbS.exe
 ```
