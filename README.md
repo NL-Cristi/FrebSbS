@@ -1,6 +1,6 @@
 # FrebSbS
 
-# ![Image of FirstScreen](/Img/FrebSbS-3.jpg)   __FrebSbs__ ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/cristian-clamsen/FrebSbS?style=for-the-badgel) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/cristian-clamsen/FrebSbS/latest/total?style=for-the-badgel)
+# ![Image of FirstScreen](/Img/FrebSbS-3.jpg)   __FrebSbs__ ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/cristian-clamsen/FrebSbS?style=for-the-badge) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/cristian-clamsen/FrebSbS/latest/total?style=for-the-badge)
 
  ![GitHub all releases](https://img.shields.io/github/downloads/cristian-clamsen/FrebSbS/total?style=for-the-badge)
  ![GitHub issues](https://img.shields.io/github/issues-raw/cristian-clamsen/FrebSbS?style=for-the-badge)
