@@ -7,7 +7,8 @@
 
 
 
-FrebSBS is a tool to review FREB traces from IIS Web Servers that has all needed XSL files included.  
+FrebSBS is a tool to review FREB traces from IIS Web Servers that has all needed XSL files included in the tool.  
+XSL files that can be used are from Windows Server 2008R2 up to 2022.
 
 ## Installation
 
