@@ -12,7 +12,7 @@ XSL files that can be used are from Windows Server 2008R2 up to 2022.
 
 ## Installation
 
-Its a stand alone exe so you only need to download the [Download LatestZIP](https:/github.com/cristian-clamsen/FrebSbS/releases/latest) and extract the exe.  
+Its a stand alone exe so you only need to download the [Download LatestZIP](https://github.com/cristian-clamsen/FrebSbS/releases/latest) and extract the exe.  
 ```bash
 FrebSbS.exe
 ```
