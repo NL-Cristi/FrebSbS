@@ -105,6 +105,10 @@ namespace FrebIt
                 myFunctions.PopulateXSL(FirstFolderTextBox.Text);
                 this.FirstDataGridView.DataSource = myFunctions.ToDataTable(myFunctions.GetDataForGrid(FirstFolderTextBox.Text));
             }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show($"No XML files found at destination:\n{ FirstFolderTextBox.Text}");
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Something bad happened. Please report it to cristian@clamsen.com. \nMessage : " + ex.Message + " Stack : \n" + ex.StackTrace);
@@ -127,6 +131,10 @@ namespace FrebIt
             {
                 myFunctions.PopulateXSL(SecondFolderTextBox.Text);
                 this.SecondDataGridView.DataSource = myFunctions.ToDataTable(myFunctions.GetDataForGrid(SecondFolderTextBox.Text));
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show($"No XML files found at destination:\n{ SecondFolderTextBox.Text}");
             }
             catch (Exception ex)
             {
