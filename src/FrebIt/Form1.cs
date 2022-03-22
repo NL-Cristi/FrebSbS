@@ -461,7 +461,7 @@ namespace FrebIt
 
         private void HelpMenu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("FrebSbs V1.0 \nFor any feedback/issue please \nreach out to cristian@clamsen.com");
+            MessageBox.Show("FrebSbs V1.1 \nFor any feedback/issue please \nreach out to cristian@clamsen.com");
 
         }
     }
