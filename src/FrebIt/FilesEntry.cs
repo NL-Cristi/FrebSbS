@@ -8,7 +8,7 @@ namespace FrebIt
 {
 	public class FilesEntry
 	{
-		public string ID { get; set; }
+		public string SiteId { get; set; }
 
 		public string FileName { get; set; }
 

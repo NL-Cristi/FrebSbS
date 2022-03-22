@@ -134,7 +134,7 @@ namespace FrebIt
                 XmlNode xmlNode = xmlDocument.SelectSingleNode("failedRequest");
                 var tata = xmlDocument.LastChild;
                 var mama = tata.ChildNodes;
-                fileEntry.ID = xmlNode.Attributes["siteId"]?.InnerText;
+                fileEntry.SiteId = xmlNode.Attributes["siteId"]?.InnerText;
                 fileEntry.FileName = secondFileInfo.Name;
                 fileEntry.Url = xmlNode.Attributes["url"].Value;
                 fileEntry.Verb = xmlNode.Attributes["verb"].Value;
