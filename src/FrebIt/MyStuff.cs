@@ -36,7 +36,13 @@ namespace FrebIt
                 dataTable.Rows.Add(values);
             }
             //put a breakpoint here and check datatable
-            return dataTable;
+            DataTable dtCloned = dataTable.Clone();
+            dtCloned.Columns[6].DataType = typeof(Int32);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                dtCloned.ImportRow(row);
+            }
+            return dtCloned;
         }
 
         public Boolean PopulateXSL(string folder)
