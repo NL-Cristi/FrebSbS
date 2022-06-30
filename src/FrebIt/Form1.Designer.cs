@@ -93,7 +93,7 @@
             this.MenuContainerFirst.Dock = System.Windows.Forms.DockStyle.Top;
             this.MenuContainerFirst.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuContainerFirst.IsSplitterFixed = true;
-            this.MenuContainerFirst.Location = new System.Drawing.Point(0, 36);
+            this.MenuContainerFirst.Location = new System.Drawing.Point(0, 27);
             this.MenuContainerFirst.Name = "MenuContainerFirst";
             // 
             // MenuContainerFirst.Panel1
@@ -118,7 +118,7 @@
             // 
             this.FirstScanButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.FirstScanButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstScanButton.Location = new System.Drawing.Point(802, 0);
+            this.FirstScanButton.Location = new System.Drawing.Point(764, 0);
             this.FirstScanButton.Name = "FirstScanButton";
             this.FirstScanButton.Size = new System.Drawing.Size(106, 50);
             this.FirstScanButton.TabIndex = 4;
@@ -131,7 +131,7 @@
             this.FirstBrowseButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.FirstBrowseButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.FirstBrowseButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstBrowseButton.Location = new System.Drawing.Point(745, 0);
+            this.FirstBrowseButton.Location = new System.Drawing.Point(707, 0);
             this.FirstBrowseButton.Name = "FirstBrowseButton";
             this.FirstBrowseButton.Size = new System.Drawing.Size(57, 50);
             this.FirstBrowseButton.TabIndex = 3;
@@ -143,9 +143,9 @@
             // 
             this.FirstFolderTextBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.FirstFolderTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstFolderTextBox.Location = new System.Drawing.Point(129, 0);
+            this.FirstFolderTextBox.Location = new System.Drawing.Point(91, 0);
             this.FirstFolderTextBox.Name = "FirstFolderTextBox";
-            this.FirstFolderTextBox.Size = new System.Drawing.Size(616, 34);
+            this.FirstFolderTextBox.Size = new System.Drawing.Size(616, 25);
             this.FirstFolderTextBox.TabIndex = 2;
             // 
             // FirstLabel
@@ -155,7 +155,7 @@
             this.FirstLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstLabel.Location = new System.Drawing.Point(0, 0);
             this.FirstLabel.Name = "FirstLabel";
-            this.FirstLabel.Size = new System.Drawing.Size(129, 28);
+            this.FirstLabel.Size = new System.Drawing.Size(91, 19);
             this.FirstLabel.TabIndex = 0;
             this.FirstLabel.Text = "First | Folder :";
             // 
@@ -163,7 +163,7 @@
             // 
             this.SecondScanButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.SecondScanButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SecondScanButton.Location = new System.Drawing.Point(830, 0);
+            this.SecondScanButton.Location = new System.Drawing.Point(782, 0);
             this.SecondScanButton.Name = "SecondScanButton";
             this.SecondScanButton.Size = new System.Drawing.Size(106, 100);
             this.SecondScanButton.TabIndex = 8;
@@ -176,7 +176,7 @@
             this.SecondBrowseButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SecondBrowseButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.SecondBrowseButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SecondBrowseButton.Location = new System.Drawing.Point(773, 0);
+            this.SecondBrowseButton.Location = new System.Drawing.Point(725, 0);
             this.SecondBrowseButton.Name = "SecondBrowseButton";
             this.SecondBrowseButton.Size = new System.Drawing.Size(57, 100);
             this.SecondBrowseButton.TabIndex = 7;
@@ -188,9 +188,9 @@
             // 
             this.SecondFolderTextBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.SecondFolderTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SecondFolderTextBox.Location = new System.Drawing.Point(157, 0);
+            this.SecondFolderTextBox.Location = new System.Drawing.Point(109, 0);
             this.SecondFolderTextBox.Name = "SecondFolderTextBox";
-            this.SecondFolderTextBox.Size = new System.Drawing.Size(616, 34);
+            this.SecondFolderTextBox.Size = new System.Drawing.Size(616, 25);
             this.SecondFolderTextBox.TabIndex = 6;
             // 
             // SecondLabel
@@ -200,21 +200,20 @@
             this.SecondLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SecondLabel.Location = new System.Drawing.Point(0, 0);
             this.SecondLabel.Name = "SecondLabel";
-            this.SecondLabel.Size = new System.Drawing.Size(157, 28);
+            this.SecondLabel.Size = new System.Drawing.Size(109, 19);
             this.SecondLabel.TabIndex = 5;
             this.SecondLabel.Text = "Second | Folder :";
             // 
             // MenuOptions
             // 
             this.MenuOptions.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuOptions.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.MenuOptions.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.MenuOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.modeToolStripMenuItem,
             this.HelpMenu});
             this.MenuOptions.Location = new System.Drawing.Point(0, 0);
             this.MenuOptions.Name = "MenuOptions";
-            this.MenuOptions.Size = new System.Drawing.Size(2378, 36);
+            this.MenuOptions.Size = new System.Drawing.Size(2378, 27);
             this.MenuOptions.TabIndex = 1;
             this.MenuOptions.Text = "menuStrip1";
             // 
@@ -226,7 +225,7 @@
             this.SecondMenu});
             this.modeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
-            this.modeToolStripMenuItem.Size = new System.Drawing.Size(80, 32);
+            this.modeToolStripMenuItem.Size = new System.Drawing.Size(57, 23);
             this.modeToolStripMenuItem.Text = "Mode";
             // 
             // SingleMenu
@@ -240,49 +239,49 @@
             this.First2008R2});
             this.SingleMenu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SingleMenu.Name = "SingleMenu";
-            this.SingleMenu.Size = new System.Drawing.Size(211, 36);
+            this.SingleMenu.Size = new System.Drawing.Size(143, 24);
             this.SingleMenu.Text = "First";
             this.SingleMenu.Click += new System.EventHandler(this.SingleMenu_Click);
             // 
             // First2022
             // 
             this.First2022.Name = "First2022";
-            this.First2022.Size = new System.Drawing.Size(181, 36);
+            this.First2022.Size = new System.Drawing.Size(126, 24);
             this.First2022.Text = "2022";
             this.First2022.Click += new System.EventHandler(this.First2022_Click);
             // 
             // First2019
             // 
             this.First2019.Name = "First2019";
-            this.First2019.Size = new System.Drawing.Size(181, 36);
+            this.First2019.Size = new System.Drawing.Size(126, 24);
             this.First2019.Text = "2019";
             this.First2019.Click += new System.EventHandler(this.First2019_Click);
             // 
             // First2016
             // 
             this.First2016.Name = "First2016";
-            this.First2016.Size = new System.Drawing.Size(181, 36);
+            this.First2016.Size = new System.Drawing.Size(126, 24);
             this.First2016.Text = "2016";
             this.First2016.Click += new System.EventHandler(this.First2016_Click);
             // 
             // First2012R2
             // 
             this.First2012R2.Name = "First2012R2";
-            this.First2012R2.Size = new System.Drawing.Size(181, 36);
+            this.First2012R2.Size = new System.Drawing.Size(126, 24);
             this.First2012R2.Text = "2012R2";
             this.First2012R2.Click += new System.EventHandler(this.First2012R2_Click);
             // 
             // First2012
             // 
             this.First2012.Name = "First2012";
-            this.First2012.Size = new System.Drawing.Size(181, 36);
+            this.First2012.Size = new System.Drawing.Size(126, 24);
             this.First2012.Text = "2012";
             this.First2012.Click += new System.EventHandler(this.First2012_Click);
             // 
             // First2008R2
             // 
             this.First2008R2.Name = "First2008R2";
-            this.First2008R2.Size = new System.Drawing.Size(181, 36);
+            this.First2008R2.Size = new System.Drawing.Size(126, 24);
             this.First2008R2.Text = "2008R2";
             this.First2008R2.Click += new System.EventHandler(this.First2008R2_Click);
             // 
@@ -290,7 +289,7 @@
             // 
             this.CompareMenu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CompareMenu.Name = "CompareMenu";
-            this.CompareMenu.Size = new System.Drawing.Size(211, 36);
+            this.CompareMenu.Size = new System.Drawing.Size(143, 24);
             this.CompareMenu.Text = "SideBySide";
             this.CompareMenu.Click += new System.EventHandler(this.CompareMenu_Click);
             // 
@@ -305,49 +304,49 @@
             this.Second2008R2});
             this.SecondMenu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SecondMenu.Name = "SecondMenu";
-            this.SecondMenu.Size = new System.Drawing.Size(211, 36);
+            this.SecondMenu.Size = new System.Drawing.Size(143, 24);
             this.SecondMenu.Text = "Second";
             this.SecondMenu.Click += new System.EventHandler(this.SecondMenu_Click);
             // 
             // Second2022
             // 
             this.Second2022.Name = "Second2022";
-            this.Second2022.Size = new System.Drawing.Size(181, 36);
+            this.Second2022.Size = new System.Drawing.Size(126, 24);
             this.Second2022.Text = "2022";
             this.Second2022.Click += new System.EventHandler(this.Second2022_Click);
             // 
             // Second2019
             // 
             this.Second2019.Name = "Second2019";
-            this.Second2019.Size = new System.Drawing.Size(181, 36);
+            this.Second2019.Size = new System.Drawing.Size(126, 24);
             this.Second2019.Text = "2019";
             this.Second2019.Click += new System.EventHandler(this.Second2019_Click);
             // 
             // Second2016
             // 
             this.Second2016.Name = "Second2016";
-            this.Second2016.Size = new System.Drawing.Size(181, 36);
+            this.Second2016.Size = new System.Drawing.Size(126, 24);
             this.Second2016.Text = "2016";
             this.Second2016.Click += new System.EventHandler(this.Second2016_Click);
             // 
             // Second2012R2
             // 
             this.Second2012R2.Name = "Second2012R2";
-            this.Second2012R2.Size = new System.Drawing.Size(181, 36);
+            this.Second2012R2.Size = new System.Drawing.Size(126, 24);
             this.Second2012R2.Text = "2012R2";
             this.Second2012R2.Click += new System.EventHandler(this.Second2012R2_Click);
             // 
             // Second2012
             // 
             this.Second2012.Name = "Second2012";
-            this.Second2012.Size = new System.Drawing.Size(181, 36);
+            this.Second2012.Size = new System.Drawing.Size(126, 24);
             this.Second2012.Text = "2012";
             this.Second2012.Click += new System.EventHandler(this.Second2012_Click);
             // 
             // Second2008R2
             // 
             this.Second2008R2.Name = "Second2008R2";
-            this.Second2008R2.Size = new System.Drawing.Size(181, 36);
+            this.Second2008R2.Size = new System.Drawing.Size(126, 24);
             this.Second2008R2.Text = "2008R2";
             this.Second2008R2.Click += new System.EventHandler(this.Second2008R2_Click);
             // 
@@ -355,7 +354,7 @@
             // 
             this.HelpMenu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HelpMenu.Name = "HelpMenu";
-            this.HelpMenu.Size = new System.Drawing.Size(69, 32);
+            this.HelpMenu.Size = new System.Drawing.Size(49, 23);
             this.HelpMenu.Text = "Help";
             this.HelpMenu.Click += new System.EventHandler(this.HelpMenu_Click);
             // 
@@ -363,7 +362,7 @@
             // 
             this.MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainContainer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainContainer.Location = new System.Drawing.Point(0, 86);
+            this.MainContainer.Location = new System.Drawing.Point(0, 77);
             this.MainContainer.Name = "MainContainer";
             // 
             // MainContainer.Panel1
@@ -374,7 +373,7 @@
             // 
             this.MainContainer.Panel2.Controls.Add(this.SecondContainer);
             this.MainContainer.Panel2Collapsed = true;
-            this.MainContainer.Size = new System.Drawing.Size(2378, 1064);
+            this.MainContainer.Size = new System.Drawing.Size(2378, 984);
             this.MainContainer.SplitterDistance = 1142;
             this.MainContainer.TabIndex = 2;
             // 
@@ -392,8 +391,8 @@
             // FirstContainer.Panel2
             // 
             this.FirstContainer.Panel2.Controls.Add(this.FirstWebBrowser);
-            this.FirstContainer.Size = new System.Drawing.Size(2378, 1064);
-            this.FirstContainer.SplitterDistance = 383;
+            this.FirstContainer.Size = new System.Drawing.Size(2378, 984);
+            this.FirstContainer.SplitterDistance = 354;
             this.FirstContainer.TabIndex = 0;
             // 
             // FirstDataGridView
@@ -414,7 +413,7 @@
             this.FirstDataGridView.RowHeadersVisible = false;
             this.FirstDataGridView.RowHeadersWidth = 62;
             this.FirstDataGridView.RowTemplate.Height = 28;
-            this.FirstDataGridView.Size = new System.Drawing.Size(2378, 383);
+            this.FirstDataGridView.Size = new System.Drawing.Size(2378, 354);
             this.FirstDataGridView.SortStringChangedInvokeBeforeDatasourceUpdate = true;
             this.FirstDataGridView.TabIndex = 0;
             this.FirstDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FirstDataGridView_CellClick);
@@ -429,7 +428,7 @@
             this.FirstWebBrowser.Location = new System.Drawing.Point(0, 0);
             this.FirstWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.FirstWebBrowser.Name = "FirstWebBrowser";
-            this.FirstWebBrowser.Size = new System.Drawing.Size(2378, 677);
+            this.FirstWebBrowser.Size = new System.Drawing.Size(2378, 626);
             this.FirstWebBrowser.TabIndex = 0;
             // 
             // SecondContainer
@@ -495,7 +494,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2378, 1150);
+            this.ClientSize = new System.Drawing.Size(2378, 1061);
             this.Controls.Add(this.MainContainer);
             this.Controls.Add(this.MenuContainerFirst);
             this.Controls.Add(this.MenuOptions);

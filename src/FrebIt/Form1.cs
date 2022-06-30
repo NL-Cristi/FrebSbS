@@ -102,8 +102,8 @@ namespace FrebIt
             this.FirstWebBrowser.Width = FirstContainer.Panel2.Width - 20;
             try
             {
-                myFunctions.PopulateXSL(FirstFolderTextBox.Text);
-                this.FirstDataGridView.DataSource = myFunctions.ToDataTable(myFunctions.GetDataForGrid(FirstFolderTextBox.Text));
+                myFunctions.PopulateXSL(FirstFolderTextBox.Text.Trim('"'));
+                this.FirstDataGridView.DataSource = myFunctions.ToDataTable(myFunctions.GetDataForGrid(FirstFolderTextBox.Text.Trim('"')));
             }
             catch (NullReferenceException ex)
             {
@@ -129,8 +129,8 @@ namespace FrebIt
             this.SecondWebBrowser.Width = SecondContainer.Panel2.Width - 20;
             try
             {
-                myFunctions.PopulateXSL(SecondFolderTextBox.Text);
-                this.SecondDataGridView.DataSource = myFunctions.ToDataTable(myFunctions.GetDataForGrid(SecondFolderTextBox.Text));
+                myFunctions.PopulateXSL(SecondFolderTextBox.Text.Trim('"'));
+                this.SecondDataGridView.DataSource = myFunctions.ToDataTable(myFunctions.GetDataForGrid(SecondFolderTextBox.Text.Trim('"')));
             }
             catch (NullReferenceException ex)
             {
@@ -247,7 +247,7 @@ namespace FrebIt
             }
             else
             {
-                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text, this.First2022.Text);
+                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text.Trim('"'), this.First2022.Text);
                 this.First2022.Checked = true;
                 this.First2019.Checked = false;
                 this.First2016.Checked = false;
@@ -266,7 +266,7 @@ namespace FrebIt
             }
             else
             {
-                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text, this.First2019.Text);
+                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text.Trim('"'), this.First2019.Text);
                 this.First2022.Checked = false;
                 this.First2019.Checked = true;
                 this.First2016.Checked = false;
@@ -284,7 +284,7 @@ namespace FrebIt
             }
             else
             {
-                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text, this.First2016.Text);
+                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text.Trim('"'), this.First2016.Text);
                 this.First2022.Checked = false;
                 this.First2019.Checked = false;
                 this.First2016.Checked = true;
@@ -302,7 +302,7 @@ namespace FrebIt
             }
             else
             {
-                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text, this.First2012R2.Text);
+                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text.Trim('"'), this.First2012R2.Text);
                 this.First2022.Checked = false;
                 this.First2019.Checked = false;
                 this.First2016.Checked = false;
@@ -320,7 +320,7 @@ namespace FrebIt
             }
             else
             {
-                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text, this.First2012.Text);
+                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text.Trim('"'), this.First2012.Text);
                 this.First2022.Checked = false;
                 this.First2019.Checked = false;
                 this.First2016.Checked = false;
@@ -339,7 +339,7 @@ namespace FrebIt
             }
             else
             {
-                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text, this.First2008R2.Text);
+                myFunctions.ReplaceFREB(this.FirstFolderTextBox.Text.Trim('"'), this.First2008R2.Text);
                 this.First2022.Checked = false;
                 this.First2019.Checked = false;
                 this.First2016.Checked = false;
@@ -351,13 +351,13 @@ namespace FrebIt
 
         private void Second2022_Click(object sender, EventArgs e)
         {
-                   if(string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
+                   if(string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
                 {
                 MessageBox.Show("Populate Folder that you want to use!");
             }
             else
             {
-                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text, this.Second2022.Text);
+                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text.Trim('"'), this.Second2022.Text);
                 this.Second2022.Checked = true;
                 this.Second2019.Checked = false;
                 this.Second2016.Checked = false;
@@ -369,13 +369,13 @@ namespace FrebIt
 
         private void Second2019_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
+            if (string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
             {
                 MessageBox.Show("Populate Folder that you want to use!");
             }
             else
             {
-                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text, this.Second2019.Text);
+                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text.Trim('"'), this.Second2019.Text);
                 this.Second2022.Checked = false;
                 this.Second2019.Checked = true;
                 this.Second2016.Checked = false;
@@ -388,13 +388,13 @@ namespace FrebIt
 
         private void Second2016_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
+            if (string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
             {
                 MessageBox.Show("Populate Folder that you want to use!");
             }
             else
             {
-                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text, this.Second2016.Text);
+                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text.Trim('"'), this.Second2016.Text);
                 this.Second2022.Checked = false;
                 this.Second2019.Checked = false;
                 this.Second2016.Checked = true;
@@ -407,13 +407,13 @@ namespace FrebIt
 
         private void Second2012R2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
+            if (string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
             {
                 MessageBox.Show("Populate Folder that you want to use!");
             }
             else
             {
-                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text, this.Second2012R2.Text);
+                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text.Trim('"'), this.Second2012R2.Text);
                 this.Second2022.Checked = false;
                 this.Second2019.Checked = false;
                 this.Second2016.Checked = false;
@@ -425,13 +425,13 @@ namespace FrebIt
 
         private void Second2012_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
+            if (string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
             {
                 MessageBox.Show("Populate Folder that you want to use!");
             }
             else
             {
-                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text, this.Second2012.Text);
+                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text.Trim('"'), this.Second2012.Text);
                 this.Second2022.Checked = false;
                 this.Second2019.Checked = false;
                 this.Second2016.Checked = false;
@@ -443,13 +443,13 @@ namespace FrebIt
 
         private void Second2008R2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
+            if (string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
             {
                 MessageBox.Show("Populate Folder that you want to use!");
             }
             else
             {
-                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text, this.Second2008R2.Text);
+                myFunctions.ReplaceFREB(this.SecondFolderTextBox.Text.Trim('"'), this.Second2008R2.Text);
                 this.Second2022.Checked = false;
                 this.Second2019.Checked = false;
                 this.Second2016.Checked = false;
@@ -461,7 +461,7 @@ namespace FrebIt
 
         private void HelpMenu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("FrebSbs V1.1 \nFor any feedback/issue please \nreach out to cristian@clamsen.com");
+            MessageBox.Show("FrebSbs V1.2 \nFor any feedback/issue please \nreach out to cristian@clamsen.com");
 
         }
     }

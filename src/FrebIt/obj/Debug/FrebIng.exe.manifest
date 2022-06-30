@@ -44,13 +44,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AdvancedDataGridView.dll" size="103424">
-      <assemblyIdentity name="AdvancedDataGridView" version="1.2.26609.5" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="AdvancedDataGridView" version="1.2.26803.6" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eVLjPKpMxFuKCqvJpqPAzgH9KxYPYtce1NHsg1TWVGM=</dsig:DigestValue>
+        <dsig:DigestValue>1uOArUPGklOegwB6B3foGYJrcruAsLmOK9E2tCA8p+A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IvDNcUQz6KfVqFxfUffCkbK3jgIGjYE79XNFATm/ejU=</dsig:DigestValue>
+        <dsig:DigestValue>zhgeUVaoDiSeKDOL7/4cbZIhOo/HNEsXTHb2JPvs6LM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
