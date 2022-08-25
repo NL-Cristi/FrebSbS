@@ -1,13 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
-
 namespace FrebIt
 {
     public partial class Form1 : Form
     {
         MyStuff myFunctions = new MyStuff();
-
         public Form1()
         {
             InitializeComponent();
@@ -28,12 +27,12 @@ namespace FrebIt
                 this.MenuContainerFirst.Panel2Collapsed = true;
                 this.MainContainer.Panel1Collapsed = false;
                 this.MainContainer.Panel2Collapsed = true;
+                this.FirstContainer.SplitterDistance = this.Height / 4;
+                this.SecondContainer.SplitterDistance = this.Height / 4;
                 this.FirstWebBrowser.Height = FirstContainer.Panel2.Height - 20;
                 this.FirstWebBrowser.Width = FirstContainer.Panel2.Width - 20;
-
             }
         }
-
         private void SecondMenu_Click(object sender, EventArgs e)
         {
             if (this.SecondMenu.Checked)
@@ -50,8 +49,10 @@ namespace FrebIt
                 this.MenuContainerFirst.Panel2Collapsed = false;
                 this.MainContainer.Panel1Collapsed = true;
                 this.MainContainer.Panel2Collapsed = false;
-                this.SecondWebBrowser.Height = FirstContainer.Panel2.Height - 20;
-                this.SecondWebBrowser.Width = FirstContainer.Panel2.Width - 20;
+                this.FirstContainer.SplitterDistance = this.Height / 4;
+                this.SecondContainer.SplitterDistance = this.Height / 4;
+                this.SecondWebBrowser.Height = SecondContainer.Panel2.Height - 20;
+                this.SecondWebBrowser.Width = SecondContainer.Panel2.Width - 20;
             }
         }
         private void CompareMenu_Click(object sender, EventArgs e)
@@ -67,15 +68,18 @@ namespace FrebIt
                 this.SingleMenu.Checked = false;
                 this.MenuContainerFirst.Panel1Collapsed = false;
                 this.MenuContainerFirst.Panel2Collapsed = false;
+                this.MenuContainerFirst.SplitterDistance = this.Width / 2;
                 this.MainContainer.Panel1Collapsed = false;
                 this.MainContainer.Panel2Collapsed = false;
+                this.MainContainer.SplitterDistance = this.Width / 2;
+                this.FirstContainer.SplitterDistance = this.Height / 4; 
+                this.SecondContainer.SplitterDistance = this.Height / 4;
                 this.FirstWebBrowser.Height = FirstContainer.Panel2.Height - 20;
                 this.FirstWebBrowser.Width = FirstContainer.Panel2.Width - 20;
                 this.SecondWebBrowser.Height = FirstContainer.Panel2.Height - 20;
                 this.SecondWebBrowser.Width = FirstContainer.Panel2.Width - 20;
             }
         }
-
         private void FirstBrowseButton_Click(object sender, EventArgs e)
         {
             this.FirstfolderBrowserDialog.ShowDialog();
@@ -85,7 +89,6 @@ namespace FrebIt
         {
             SecondfolderBrowserDialog.ShowDialog();
             this.SecondFolderTextBox.Text = SecondfolderBrowserDialog.SelectedPath;
-
         }
         private void FirstScanButton_Click(object sender, EventArgs e)
         {
@@ -95,7 +98,6 @@ namespace FrebIt
                 return;
             }
             this.MainContainer.Show();
-
             this.FirstDataGridView.Visible = true;
             this.FirstDataGridView.Columns.Clear();
             this.FirstWebBrowser.Height = FirstContainer.Panel2.Height - 20;
@@ -107,14 +109,13 @@ namespace FrebIt
             }
             catch (NullReferenceException ex)
             {
-                MessageBox.Show($"No XML files found at destination:\n{ FirstFolderTextBox.Text}");
+                MessageBox.Show($"No XML files found at destination:\n{FirstFolderTextBox.Text}");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Something bad happened. Please report it to cristian@clamsen.com. \nMessage : " + ex.Message + " Stack : \n" + ex.StackTrace);
             }
         }
-
         private void SecondScanButton_Click(object sender, EventArgs e)
         {
             if (this.SecondFolderTextBox.Text.Trim() == "")
@@ -134,14 +135,13 @@ namespace FrebIt
             }
             catch (NullReferenceException ex)
             {
-                MessageBox.Show($"No XML files found at destination:\n{ SecondFolderTextBox.Text}");
+                MessageBox.Show($"No XML files found at destination:\n{SecondFolderTextBox.Text}");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Something bad happened. Please report it to cristian@clamsen.com. \nMessage : " + ex.Message + " Stack : \n" + ex.StackTrace);
             }
         }
-
         private void FirstDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (!FirstDataGridView.CurrentRow.IsNewRow)
@@ -153,7 +153,6 @@ namespace FrebIt
                 this.FirstWebBrowser.Navigate(((DataGridView)sender).CurrentRow.Cells[7].Value.ToString());
             }
         }
-
         private void FirstDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             this.FirstDataGridView.CurrentRow.Selected = true;
@@ -161,9 +160,7 @@ namespace FrebIt
             this.FirstWebBrowser.Height = FirstContainer.Panel2.Height - 20;
             this.FirstWebBrowser.Width = FirstContainer.Panel2.Width - 20;
             this.FirstWebBrowser.Navigate(((DataGridView)sender).CurrentRow.Cells[7].Value.ToString());
-
         }
-
         private void FirstDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.FirstDataGridView.CurrentRow.Selected = true;
@@ -171,12 +168,9 @@ namespace FrebIt
             this.SecondWebBrowser.Height = SecondContainer.Panel2.Height - 20;
             this.SecondWebBrowser.Width = SecondContainer.Panel2.Width - 20;
             this.FirstWebBrowser.Navigate(((DataGridView)sender).CurrentRow.Cells[7].Value.ToString());
-
         }
-
         private void FirstDataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
             var dataa = (Zuby.ADGV.AdvancedDataGridView)sender;
             //var column = dataa.Columns[e.ColumnIndex];
             //var _firstDataTableReportParam = (DataTable)FirstDataGrid.DataSource;
@@ -185,12 +179,8 @@ namespace FrebIt
             //dv.Sort = column.DataPropertyName;
             ////   Convert back your sorted DataView to DataTable
             //_firstDataTableReportParam = dv.ToTable();
-
             //FirstDataGrid.DataSource = _firstDataTableReportParam;
-
             DataGridViewColumn newColumn = dataa.Columns[e.ColumnIndex];
-
-
             DataGridViewColumn oldColumn = dataa.SortedColumn;
             ListSortDirection direction;
             if (oldColumn != null)
@@ -212,7 +202,6 @@ namespace FrebIt
             {
                 direction = ListSortDirection.Ascending;
             }
-
             // If no column has been selected, display an error dialog  box.
             if (dataa.Columns[e.ColumnIndex] == null)
             {
@@ -228,7 +217,6 @@ namespace FrebIt
                 //    SortOrder.Ascending : SortOrder.Descending;
             }
         }
-
         private void SecondDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             this.SecondDataGridView.CurrentRow.Selected = true;
@@ -236,13 +224,11 @@ namespace FrebIt
             this.SecondWebBrowser.Height = SecondContainer.Panel2.Height - 20;
             this.SecondWebBrowser.Width = SecondContainer.Panel2.Width - 20;
             this.SecondWebBrowser.Navigate(((DataGridView)sender).CurrentRow.Cells[7].Value.ToString());
-
         }
-
         private void First2022_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
-                {
+            if (string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
+            {
                 MessageBox.Show("Please select a valid folder.");
             }
             else
@@ -254,10 +240,8 @@ namespace FrebIt
                 this.First2012R2.Checked = false;
                 this.First2012.Checked = false;
                 this.First2008R2.Checked = false;
-
             }
         }
-
         private void First2019_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
@@ -275,7 +259,6 @@ namespace FrebIt
                 this.First2008R2.Checked = false;
             }
         }
-
         private void First2016_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
@@ -293,7 +276,6 @@ namespace FrebIt
                 this.First2008R2.Checked = false;
             }
         }
-
         private void First2012R2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
@@ -311,7 +293,6 @@ namespace FrebIt
                 this.First2008R2.Checked = false;
             }
         }
-
         private void First2012_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
@@ -328,9 +309,7 @@ namespace FrebIt
                 this.First2012.Checked = true;
                 this.First2008R2.Checked = false;
             }
-
         }
-
         private void First2008R2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(this.FirstFolderTextBox.Text))
@@ -348,11 +327,10 @@ namespace FrebIt
                 this.First2008R2.Checked = true;
             }
         }
-
         private void Second2022_Click(object sender, EventArgs e)
         {
-                   if(string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
-                {
+            if (string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
+            {
                 MessageBox.Show("Populate Folder that you want to use!");
             }
             else
@@ -366,7 +344,6 @@ namespace FrebIt
                 this.Second2008R2.Checked = false;
             }
         }
-
         private void Second2019_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
@@ -383,9 +360,7 @@ namespace FrebIt
                 this.Second2012.Checked = false;
                 this.Second2008R2.Checked = false;
             }
-
         }
-
         private void Second2016_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
@@ -402,9 +377,7 @@ namespace FrebIt
                 this.Second2012.Checked = false;
                 this.Second2008R2.Checked = false;
             }
-
         }
-
         private void Second2012R2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
@@ -422,7 +395,6 @@ namespace FrebIt
                 this.Second2008R2.Checked = false;
             }
         }
-
         private void Second2012_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
@@ -440,7 +412,6 @@ namespace FrebIt
                 this.Second2008R2.Checked = false;
             }
         }
-
         private void Second2008R2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(this.SecondFolderTextBox.Text))
@@ -458,11 +429,185 @@ namespace FrebIt
                 this.Second2008R2.Checked = true;
             }
         }
-
         private void HelpMenu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("FrebSbs V1.3 \nFor any feedback/issue please \nreach out to cristian@clamsen.com");
-
+            MessageBox.Show("FrebSbs V1.4 \nFor any feedback/issue please \nreach out to cristian@clamsen.com");
+        }
+        private void firstSaveSelectedAsHTMLFullToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Int32 selectedRowCount = this.FirstDataGridView.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if (selectedRowCount > 0)
+            {
+                if (selectedRowCount > 1)
+                {
+                    var mySelectedRows = this.FirstDataGridView.SelectedRows;
+                    var myConvertInfoList = new List<ConvertInfo>();
+                    foreach (DataGridViewRow selectedRow in mySelectedRows)
+                    {
+                        var myConvertInfo = new ConvertInfo();
+                        myConvertInfo.FileName = selectedRow.Cells["FileName"].Value.ToString();
+                        myConvertInfo.FileFullPath = selectedRow.Cells["FileFullPath"].Value.ToString();
+                        myConvertInfo.FileFolderPath = selectedRow.Cells["FolderPath"].Value.ToString();
+                        myConvertInfoList.Add(myConvertInfo);
+                    }
+                    myFunctions.ConvertAllToHtml(myConvertInfoList, true);
+                }
+                else
+                {
+                    var myConvertInfo = new ConvertInfo();
+                    DataGridViewRow row = this.FirstDataGridView.SelectedRows[0];
+                    myConvertInfo.FileName = row.Cells["FileName"].Value.ToString();
+                    myConvertInfo.FileFullPath = row.Cells["FileFullPath"].Value.ToString();
+                    myConvertInfo.FileFolderPath = row.Cells["FolderPath"].Value.ToString();
+                    myFunctions.ConvertFileToHTML(myConvertInfo, true);
+                }
+            }
+        }
+        private void firstSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Int32 selectedRowCount = this.FirstDataGridView.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if (selectedRowCount > 0)
+            {
+                if (selectedRowCount > 1)
+                {
+                    var mySelectedRows = this.FirstDataGridView.SelectedRows;
+                    var myConvertInfoList = new List<ConvertInfo>();
+                    foreach (DataGridViewRow selectedRow in mySelectedRows)
+                    {
+                        var myConvertInfo = new ConvertInfo();
+                        myConvertInfo.FileName = selectedRow.Cells["FileName"].Value.ToString();
+                        myConvertInfo.FileFullPath = selectedRow.Cells["FileFullPath"].Value.ToString();
+                        myConvertInfo.FileFolderPath = selectedRow.Cells["FolderPath"].Value.ToString();
+                        myConvertInfoList.Add(myConvertInfo);
+                    }
+                    myFunctions.ConvertAllToHtml(myConvertInfoList, false);
+                }
+                else
+                {
+                    var myConvertInfo = new ConvertInfo();
+                    DataGridViewRow row = this.FirstDataGridView.SelectedRows[0];
+                    myConvertInfo.FileName = row.Cells["FileName"].Value.ToString();
+                    myConvertInfo.FileFullPath = row.Cells["FileFullPath"].Value.ToString();
+                    myConvertInfo.FileFolderPath = row.Cells["FolderPath"].Value.ToString();
+                    myFunctions.ConvertFileToHTML(myConvertInfo, false);
+                }
+            }
+        }
+        private void firstSaveALLAsHTMLFullToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var mySelectedRows = this.FirstDataGridView.Rows;
+            var myConvertInfoList = new List<ConvertInfo>();
+            foreach (DataGridViewRow selectedRow in mySelectedRows)
+            {
+                var myConvertInfo = new ConvertInfo();
+                myConvertInfo.FileName = selectedRow.Cells["FileName"].Value.ToString();
+                myConvertInfo.FileFullPath = selectedRow.Cells["FileFullPath"].Value.ToString();
+                myConvertInfo.FileFolderPath = selectedRow.Cells["FolderPath"].Value.ToString();
+                myConvertInfoList.Add(myConvertInfo);
+            }
+            myFunctions.ConvertAllToHtml(myConvertInfoList, true);
+        }
+        private void firstSaveAllAsHTMLDetailsOnlyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var mySelectedRows = this.FirstDataGridView.Rows;
+            var myConvertInfoList = new List<ConvertInfo>();
+            foreach (DataGridViewRow selectedRow in mySelectedRows)
+            {
+                var myConvertInfo = new ConvertInfo();
+                myConvertInfo.FileName = selectedRow.Cells["FileName"].Value.ToString();
+                myConvertInfo.FileFullPath = selectedRow.Cells["FileFullPath"].Value.ToString();
+                myConvertInfo.FileFolderPath = selectedRow.Cells["FolderPath"].Value.ToString();
+                myConvertInfoList.Add(myConvertInfo);
+            }
+            myFunctions.ConvertAllToHtml(myConvertInfoList, true);
+        }
+        private void secondSaveSelectedAsHTMLFullToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Int32 selectedRowCount = this.SecondDataGridView.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if (selectedRowCount > 0)
+            {
+                if (selectedRowCount > 1)
+                {
+                    var mySelectedRows = this.SecondDataGridView.SelectedRows;
+                    var myConvertInfoList = new List<ConvertInfo>();
+                    foreach (DataGridViewRow selectedRow in mySelectedRows)
+                    {
+                        var myConvertInfo = new ConvertInfo();
+                        myConvertInfo.FileName = selectedRow.Cells["FileName"].Value.ToString();
+                        myConvertInfo.FileFullPath = selectedRow.Cells["FileFullPath"].Value.ToString();
+                        myConvertInfo.FileFolderPath = selectedRow.Cells["FolderPath"].Value.ToString();
+                        myConvertInfoList.Add(myConvertInfo);
+                    }
+                    myFunctions.ConvertAllToHtml(myConvertInfoList, true);
+                }
+                else
+                {
+                    var myConvertInfo = new ConvertInfo();
+                    DataGridViewRow row = this.SecondDataGridView.SelectedRows[0];
+                    myConvertInfo.FileName = row.Cells["FileName"].Value.ToString();
+                    myConvertInfo.FileFullPath = row.Cells["FileFullPath"].Value.ToString();
+                    myConvertInfo.FileFolderPath = row.Cells["FolderPath"].Value.ToString();
+                    myFunctions.ConvertFileToHTML(myConvertInfo, true);
+                }
+            }
+        }
+        private void secondSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Int32 selectedRowCount = this.SecondDataGridView.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if (selectedRowCount > 0)
+            {
+                if (selectedRowCount > 1)
+                {
+                    var mySelectedRows = this.SecondDataGridView.SelectedRows;
+                    var myConvertInfoList = new List<ConvertInfo>();
+                    foreach (DataGridViewRow selectedRow in mySelectedRows)
+                    {
+                        var myConvertInfo = new ConvertInfo();
+                        myConvertInfo.FileName = selectedRow.Cells["FileName"].Value.ToString();
+                        myConvertInfo.FileFullPath = selectedRow.Cells["FileFullPath"].Value.ToString();
+                        myConvertInfo.FileFolderPath = selectedRow.Cells["FolderPath"].Value.ToString();
+                        myConvertInfoList.Add(myConvertInfo);
+                    }
+                    myFunctions.ConvertAllToHtml(myConvertInfoList, false);
+                }
+                else
+                {
+                    var myConvertInfo = new ConvertInfo();
+                    DataGridViewRow row = this.SecondDataGridView.SelectedRows[0];
+                    myConvertInfo.FileName = row.Cells["FileName"].Value.ToString();
+                    myConvertInfo.FileFullPath = row.Cells["FileFullPath"].Value.ToString();
+                    myConvertInfo.FileFolderPath = row.Cells["FolderPath"].Value.ToString();
+                    myFunctions.ConvertFileToHTML(myConvertInfo, false);
+                }
+            }
+        }
+        private void secondSaveALLAsHTMLFullToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var mySelectedRows = this.SecondDataGridView.Rows;
+            var myConvertInfoList = new List<ConvertInfo>();
+            foreach (DataGridViewRow selectedRow in mySelectedRows)
+            {
+                var myConvertInfo = new ConvertInfo();
+                myConvertInfo.FileName = selectedRow.Cells["FileName"].Value.ToString();
+                myConvertInfo.FileFullPath = selectedRow.Cells["FileFullPath"].Value.ToString();
+                myConvertInfo.FileFolderPath = selectedRow.Cells["FolderPath"].Value.ToString();
+                myConvertInfoList.Add(myConvertInfo);
+            }
+            myFunctions.ConvertAllToHtml(myConvertInfoList, true);
+        }
+        private void secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var mySelectedRows = this.SecondDataGridView.Rows;
+            var myConvertInfoList = new List<ConvertInfo>();
+            foreach (DataGridViewRow selectedRow in mySelectedRows)
+            {
+                var myConvertInfo = new ConvertInfo();
+                myConvertInfo.FileName = selectedRow.Cells["FileName"].Value.ToString();
+                myConvertInfo.FileFullPath = selectedRow.Cells["FileFullPath"].Value.ToString();
+                myConvertInfo.FileFolderPath = selectedRow.Cells["FolderPath"].Value.ToString();
+                myConvertInfoList.Add(myConvertInfo);
+            }
+            myFunctions.ConvertAllToHtml(myConvertInfoList, true);
         }
     }
 }

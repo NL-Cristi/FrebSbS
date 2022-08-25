@@ -60,13 +60,22 @@
             this.MainContainer = new System.Windows.Forms.SplitContainer();
             this.FirstContainer = new System.Windows.Forms.SplitContainer();
             this.FirstDataGridView = new Zuby.ADGV.AdvancedDataGridView();
+            this.FirstHtmlContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.firstSaveSelectedAsHTMLFullToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.firstSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.firstSaveALLAsHTMLFullToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.firstSaveAllAsHTMLDetailsOnlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FirstWebBrowser = new System.Windows.Forms.WebBrowser();
             this.SecondContainer = new System.Windows.Forms.SplitContainer();
             this.SecondDataGridView = new Zuby.ADGV.AdvancedDataGridView();
+            this.SecondHtmlContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.secondSaveSelectedAsHTMLFullToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.secondSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.secondSaveALLAsHTMLFullToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SecondWebBrowser = new System.Windows.Forms.WebBrowser();
             this.FirstfolderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.SecondfolderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.MenuContainerFirst)).BeginInit();
             this.MenuContainerFirst.Panel1.SuspendLayout();
             this.MenuContainerFirst.Panel2.SuspendLayout();
@@ -81,11 +90,13 @@
             this.FirstContainer.Panel2.SuspendLayout();
             this.FirstContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FirstDataGridView)).BeginInit();
+            this.FirstHtmlContextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SecondContainer)).BeginInit();
             this.SecondContainer.Panel1.SuspendLayout();
             this.SecondContainer.Panel2.SuspendLayout();
             this.SecondContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SecondDataGridView)).BeginInit();
+            this.SecondHtmlContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuContainerFirst
@@ -93,7 +104,8 @@
             this.MenuContainerFirst.Dock = System.Windows.Forms.DockStyle.Top;
             this.MenuContainerFirst.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuContainerFirst.IsSplitterFixed = true;
-            this.MenuContainerFirst.Location = new System.Drawing.Point(0, 27);
+            this.MenuContainerFirst.Location = new System.Drawing.Point(0, 25);
+            this.MenuContainerFirst.Margin = new System.Windows.Forms.Padding(2);
             this.MenuContainerFirst.Name = "MenuContainerFirst";
             // 
             // MenuContainerFirst.Panel1
@@ -110,17 +122,19 @@
             this.MenuContainerFirst.Panel2.Controls.Add(this.SecondFolderTextBox);
             this.MenuContainerFirst.Panel2.Controls.Add(this.SecondLabel);
             this.MenuContainerFirst.Panel2Collapsed = true;
-            this.MenuContainerFirst.Size = new System.Drawing.Size(2378, 50);
+            this.MenuContainerFirst.Size = new System.Drawing.Size(1585, 32);
             this.MenuContainerFirst.SplitterDistance = 1142;
+            this.MenuContainerFirst.SplitterWidth = 3;
             this.MenuContainerFirst.TabIndex = 0;
             // 
             // FirstScanButton
             // 
             this.FirstScanButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.FirstScanButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstScanButton.Location = new System.Drawing.Point(764, 0);
+            this.FirstScanButton.Location = new System.Drawing.Point(541, 0);
+            this.FirstScanButton.Margin = new System.Windows.Forms.Padding(2);
             this.FirstScanButton.Name = "FirstScanButton";
-            this.FirstScanButton.Size = new System.Drawing.Size(106, 50);
+            this.FirstScanButton.Size = new System.Drawing.Size(71, 32);
             this.FirstScanButton.TabIndex = 4;
             this.FirstScanButton.Text = "Scan";
             this.FirstScanButton.UseVisualStyleBackColor = true;
@@ -131,9 +145,10 @@
             this.FirstBrowseButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.FirstBrowseButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.FirstBrowseButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstBrowseButton.Location = new System.Drawing.Point(707, 0);
+            this.FirstBrowseButton.Location = new System.Drawing.Point(503, 0);
+            this.FirstBrowseButton.Margin = new System.Windows.Forms.Padding(2);
             this.FirstBrowseButton.Name = "FirstBrowseButton";
-            this.FirstBrowseButton.Size = new System.Drawing.Size(57, 50);
+            this.FirstBrowseButton.Size = new System.Drawing.Size(38, 32);
             this.FirstBrowseButton.TabIndex = 3;
             this.FirstBrowseButton.Text = "...";
             this.FirstBrowseButton.UseVisualStyleBackColor = true;
@@ -144,8 +159,9 @@
             this.FirstFolderTextBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.FirstFolderTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstFolderTextBox.Location = new System.Drawing.Point(91, 0);
+            this.FirstFolderTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstFolderTextBox.Name = "FirstFolderTextBox";
-            this.FirstFolderTextBox.Size = new System.Drawing.Size(616, 25);
+            this.FirstFolderTextBox.Size = new System.Drawing.Size(412, 25);
             this.FirstFolderTextBox.TabIndex = 2;
             // 
             // FirstLabel
@@ -154,6 +170,7 @@
             this.FirstLabel.Dock = System.Windows.Forms.DockStyle.Left;
             this.FirstLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstLabel.Location = new System.Drawing.Point(0, 0);
+            this.FirstLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FirstLabel.Name = "FirstLabel";
             this.FirstLabel.Size = new System.Drawing.Size(91, 19);
             this.FirstLabel.TabIndex = 0;
@@ -163,9 +180,10 @@
             // 
             this.SecondScanButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.SecondScanButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SecondScanButton.Location = new System.Drawing.Point(782, 0);
+            this.SecondScanButton.Location = new System.Drawing.Point(559, 0);
+            this.SecondScanButton.Margin = new System.Windows.Forms.Padding(2);
             this.SecondScanButton.Name = "SecondScanButton";
-            this.SecondScanButton.Size = new System.Drawing.Size(106, 100);
+            this.SecondScanButton.Size = new System.Drawing.Size(71, 100);
             this.SecondScanButton.TabIndex = 8;
             this.SecondScanButton.Text = "Scan";
             this.SecondScanButton.UseVisualStyleBackColor = true;
@@ -176,9 +194,10 @@
             this.SecondBrowseButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SecondBrowseButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.SecondBrowseButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SecondBrowseButton.Location = new System.Drawing.Point(725, 0);
+            this.SecondBrowseButton.Location = new System.Drawing.Point(521, 0);
+            this.SecondBrowseButton.Margin = new System.Windows.Forms.Padding(2);
             this.SecondBrowseButton.Name = "SecondBrowseButton";
-            this.SecondBrowseButton.Size = new System.Drawing.Size(57, 100);
+            this.SecondBrowseButton.Size = new System.Drawing.Size(38, 100);
             this.SecondBrowseButton.TabIndex = 7;
             this.SecondBrowseButton.Text = "...";
             this.SecondBrowseButton.UseVisualStyleBackColor = true;
@@ -189,8 +208,9 @@
             this.SecondFolderTextBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.SecondFolderTextBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SecondFolderTextBox.Location = new System.Drawing.Point(109, 0);
+            this.SecondFolderTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SecondFolderTextBox.Name = "SecondFolderTextBox";
-            this.SecondFolderTextBox.Size = new System.Drawing.Size(616, 25);
+            this.SecondFolderTextBox.Size = new System.Drawing.Size(412, 25);
             this.SecondFolderTextBox.TabIndex = 6;
             // 
             // SecondLabel
@@ -199,6 +219,7 @@
             this.SecondLabel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SecondLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SecondLabel.Location = new System.Drawing.Point(0, 0);
+            this.SecondLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SecondLabel.Name = "SecondLabel";
             this.SecondLabel.Size = new System.Drawing.Size(109, 19);
             this.SecondLabel.TabIndex = 5;
@@ -213,7 +234,8 @@
             this.HelpMenu});
             this.MenuOptions.Location = new System.Drawing.Point(0, 0);
             this.MenuOptions.Name = "MenuOptions";
-            this.MenuOptions.Size = new System.Drawing.Size(2378, 27);
+            this.MenuOptions.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.MenuOptions.Size = new System.Drawing.Size(1585, 25);
             this.MenuOptions.TabIndex = 1;
             this.MenuOptions.Text = "menuStrip1";
             // 
@@ -362,7 +384,8 @@
             // 
             this.MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainContainer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainContainer.Location = new System.Drawing.Point(0, 77);
+            this.MainContainer.Location = new System.Drawing.Point(0, 57);
+            this.MainContainer.Margin = new System.Windows.Forms.Padding(2);
             this.MainContainer.Name = "MainContainer";
             // 
             // MainContainer.Panel1
@@ -373,14 +396,16 @@
             // 
             this.MainContainer.Panel2.Controls.Add(this.SecondContainer);
             this.MainContainer.Panel2Collapsed = true;
-            this.MainContainer.Size = new System.Drawing.Size(2378, 984);
+            this.MainContainer.Size = new System.Drawing.Size(1585, 704);
             this.MainContainer.SplitterDistance = 1142;
+            this.MainContainer.SplitterWidth = 3;
             this.MainContainer.TabIndex = 2;
             // 
             // FirstContainer
             // 
             this.FirstContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FirstContainer.Location = new System.Drawing.Point(0, 0);
+            this.FirstContainer.Margin = new System.Windows.Forms.Padding(2);
             this.FirstContainer.Name = "FirstContainer";
             this.FirstContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -391,8 +416,9 @@
             // FirstContainer.Panel2
             // 
             this.FirstContainer.Panel2.Controls.Add(this.FirstWebBrowser);
-            this.FirstContainer.Size = new System.Drawing.Size(2378, 984);
-            this.FirstContainer.SplitterDistance = 354;
+            this.FirstContainer.Size = new System.Drawing.Size(1585, 704);
+            this.FirstContainer.SplitterDistance = 175;
+            this.FirstContainer.SplitterWidth = 3;
             this.FirstContainer.TabIndex = 0;
             // 
             // FirstDataGridView
@@ -403,17 +429,19 @@
             this.FirstDataGridView.AllowUserToResizeRows = false;
             this.FirstDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.FirstDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FirstDataGridView.ContextMenuStrip = this.FirstHtmlContextMenu;
             this.FirstDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FirstDataGridView.FilterAndSortEnabled = true;
             this.FirstDataGridView.FilterStringChangedInvokeBeforeDatasourceUpdate = true;
             this.FirstDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.FirstDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.FirstDataGridView.Name = "FirstDataGridView";
             this.FirstDataGridView.ReadOnly = true;
             this.FirstDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.FirstDataGridView.RowHeadersVisible = false;
             this.FirstDataGridView.RowHeadersWidth = 62;
             this.FirstDataGridView.RowTemplate.Height = 28;
-            this.FirstDataGridView.Size = new System.Drawing.Size(2378, 354);
+            this.FirstDataGridView.Size = new System.Drawing.Size(1585, 175);
             this.FirstDataGridView.SortStringChangedInvokeBeforeDatasourceUpdate = true;
             this.FirstDataGridView.TabIndex = 0;
             this.FirstDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FirstDataGridView_CellClick);
@@ -422,19 +450,60 @@
             this.FirstDataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FirstDataGridView_ColumnHeaderMouseClick);
             this.FirstDataGridView.ColumnHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FirstDataGridView_ColumnHeaderMouseClick);
             // 
+            // FirstHtmlContextMenu
+            // 
+            this.FirstHtmlContextMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.FirstHtmlContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.firstSaveSelectedAsHTMLFullToolStripMenuItem,
+            this.firstSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem,
+            this.firstSaveALLAsHTMLFullToolStripMenuItem,
+            this.firstSaveAllAsHTMLDetailsOnlyToolStripMenuItem});
+            this.FirstHtmlContextMenu.Name = "HtmlcontextMenuStrip";
+            this.FirstHtmlContextMenu.Size = new System.Drawing.Size(261, 92);
+            // 
+            // firstSaveSelectedAsHTMLFullToolStripMenuItem
+            // 
+            this.firstSaveSelectedAsHTMLFullToolStripMenuItem.Name = "firstSaveSelectedAsHTMLFullToolStripMenuItem";
+            this.firstSaveSelectedAsHTMLFullToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.firstSaveSelectedAsHTMLFullToolStripMenuItem.Text = "Save Selected as HTML Full";
+            this.firstSaveSelectedAsHTMLFullToolStripMenuItem.Click += new System.EventHandler(this.firstSaveSelectedAsHTMLFullToolStripMenuItem_Click);
+            // 
+            // firstSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem
+            // 
+            this.firstSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem.Name = "firstSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem";
+            this.firstSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.firstSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem.Text = "Save Selected as HTML Details Only";
+            this.firstSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem.Click += new System.EventHandler(this.firstSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem_Click);
+            // 
+            // firstSaveALLAsHTMLFullToolStripMenuItem
+            // 
+            this.firstSaveALLAsHTMLFullToolStripMenuItem.Name = "firstSaveALLAsHTMLFullToolStripMenuItem";
+            this.firstSaveALLAsHTMLFullToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.firstSaveALLAsHTMLFullToolStripMenuItem.Text = "Save ALL as HTML Full";
+            this.firstSaveALLAsHTMLFullToolStripMenuItem.Click += new System.EventHandler(this.firstSaveALLAsHTMLFullToolStripMenuItem_Click);
+            // 
+            // firstSaveAllAsHTMLDetailsOnlyToolStripMenuItem
+            // 
+            this.firstSaveAllAsHTMLDetailsOnlyToolStripMenuItem.Name = "firstSaveAllAsHTMLDetailsOnlyToolStripMenuItem";
+            this.firstSaveAllAsHTMLDetailsOnlyToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.firstSaveAllAsHTMLDetailsOnlyToolStripMenuItem.Text = "Save All as HTML Details Only";
+            this.firstSaveAllAsHTMLDetailsOnlyToolStripMenuItem.Click += new System.EventHandler(this.firstSaveAllAsHTMLDetailsOnlyToolStripMenuItem_Click);
+            // 
             // FirstWebBrowser
             // 
             this.FirstWebBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FirstWebBrowser.Location = new System.Drawing.Point(0, 0);
-            this.FirstWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.FirstWebBrowser.Margin = new System.Windows.Forms.Padding(2);
+            this.FirstWebBrowser.MinimumSize = new System.Drawing.Size(13, 13);
             this.FirstWebBrowser.Name = "FirstWebBrowser";
-            this.FirstWebBrowser.Size = new System.Drawing.Size(2378, 626);
+            this.FirstWebBrowser.Size = new System.Drawing.Size(1585, 526);
             this.FirstWebBrowser.TabIndex = 0;
             // 
             // SecondContainer
             // 
             this.SecondContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SecondContainer.Location = new System.Drawing.Point(0, 0);
+            this.SecondContainer.Margin = new System.Windows.Forms.Padding(2);
             this.SecondContainer.Name = "SecondContainer";
             this.SecondContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -446,7 +515,8 @@
             // 
             this.SecondContainer.Panel2.Controls.Add(this.SecondWebBrowser);
             this.SecondContainer.Size = new System.Drawing.Size(96, 100);
-            this.SecondContainer.SplitterDistance = 35;
+            this.SecondContainer.SplitterDistance = 71;
+            this.SecondContainer.SplitterWidth = 3;
             this.SecondContainer.TabIndex = 0;
             // 
             // SecondDataGridView
@@ -456,17 +526,19 @@
             this.SecondDataGridView.AllowUserToOrderColumns = true;
             this.SecondDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SecondDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SecondDataGridView.ContextMenuStrip = this.SecondHtmlContextMenu;
             this.SecondDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SecondDataGridView.FilterAndSortEnabled = true;
             this.SecondDataGridView.FilterStringChangedInvokeBeforeDatasourceUpdate = true;
             this.SecondDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.SecondDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.SecondDataGridView.Name = "SecondDataGridView";
             this.SecondDataGridView.ReadOnly = true;
             this.SecondDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SecondDataGridView.RowHeadersVisible = false;
             this.SecondDataGridView.RowHeadersWidth = 62;
             this.SecondDataGridView.RowTemplate.Height = 28;
-            this.SecondDataGridView.Size = new System.Drawing.Size(96, 35);
+            this.SecondDataGridView.Size = new System.Drawing.Size(96, 71);
             this.SecondDataGridView.SortStringChangedInvokeBeforeDatasourceUpdate = true;
             this.SecondDataGridView.TabIndex = 0;
             this.SecondDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SecondDataGridView_CellClick);
@@ -475,30 +547,65 @@
             this.SecondDataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FirstDataGridView_ColumnHeaderMouseClick);
             this.SecondDataGridView.ColumnHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FirstDataGridView_ColumnHeaderMouseClick);
             // 
+            // SecondHtmlContextMenu
+            // 
+            this.SecondHtmlContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.secondSaveSelectedAsHTMLFullToolStripMenuItem,
+            this.secondSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem,
+            this.secondSaveALLAsHTMLFullToolStripMenuItem,
+            this.secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem});
+            this.SecondHtmlContextMenu.Name = "SecondHtmlContextMenu";
+            this.SecondHtmlContextMenu.Size = new System.Drawing.Size(261, 92);
+            // 
+            // secondSaveSelectedAsHTMLFullToolStripMenuItem
+            // 
+            this.secondSaveSelectedAsHTMLFullToolStripMenuItem.Name = "secondSaveSelectedAsHTMLFullToolStripMenuItem";
+            this.secondSaveSelectedAsHTMLFullToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.secondSaveSelectedAsHTMLFullToolStripMenuItem.Text = "Save Selected as HTML Full";
+            this.secondSaveSelectedAsHTMLFullToolStripMenuItem.Click += new System.EventHandler(this.secondSaveSelectedAsHTMLFullToolStripMenuItem_Click);
+            // 
+            // secondSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem
+            // 
+            this.secondSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem.Name = "secondSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem";
+            this.secondSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.secondSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem.Text = "Save Selected as HTML Details Only";
+            this.secondSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem.Click += new System.EventHandler(this.secondSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem_Click);
+            // 
+            // secondSaveALLAsHTMLFullToolStripMenuItem
+            // 
+            this.secondSaveALLAsHTMLFullToolStripMenuItem.Name = "secondSaveALLAsHTMLFullToolStripMenuItem";
+            this.secondSaveALLAsHTMLFullToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.secondSaveALLAsHTMLFullToolStripMenuItem.Text = "Save ALL as HTML Full";
+            this.secondSaveALLAsHTMLFullToolStripMenuItem.Click += new System.EventHandler(this.secondSaveALLAsHTMLFullToolStripMenuItem_Click);
+            // 
+            // secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem
+            // 
+            this.secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem.Name = "secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem";
+            this.secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem.Text = "Save All as HTML Details Only";
+            this.secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem.Click += new System.EventHandler(this.secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem_Click);
+            // 
             // SecondWebBrowser
             // 
             this.SecondWebBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SecondWebBrowser.Location = new System.Drawing.Point(0, 0);
-            this.SecondWebBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.SecondWebBrowser.Margin = new System.Windows.Forms.Padding(2);
+            this.SecondWebBrowser.MinimumSize = new System.Drawing.Size(13, 13);
             this.SecondWebBrowser.Name = "SecondWebBrowser";
-            this.SecondWebBrowser.Size = new System.Drawing.Size(96, 61);
+            this.SecondWebBrowser.Size = new System.Drawing.Size(96, 26);
             this.SecondWebBrowser.TabIndex = 0;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2378, 1061);
+            this.ClientSize = new System.Drawing.Size(1585, 761);
             this.Controls.Add(this.MainContainer);
             this.Controls.Add(this.MenuContainerFirst);
             this.Controls.Add(this.MenuOptions);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "FrebSbS";
             this.MenuContainerFirst.Panel1.ResumeLayout(false);
@@ -518,11 +625,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.FirstContainer)).EndInit();
             this.FirstContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FirstDataGridView)).EndInit();
+            this.FirstHtmlContextMenu.ResumeLayout(false);
             this.SecondContainer.Panel1.ResumeLayout(false);
             this.SecondContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SecondContainer)).EndInit();
             this.SecondContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SecondDataGridView)).EndInit();
+            this.SecondHtmlContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,7 +675,16 @@
         private System.Windows.Forms.ToolStripMenuItem Second2016;
         private System.Windows.Forms.ToolStripMenuItem Second2019;
         private System.Windows.Forms.ToolStripMenuItem Second2022;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip FirstHtmlContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem firstSaveSelectedAsHTMLFullToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem firstSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem firstSaveALLAsHTMLFullToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem firstSaveAllAsHTMLDetailsOnlyToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip SecondHtmlContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem secondSaveSelectedAsHTMLFullToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem secondSaveSelectedAsHTMLDetailsOnlyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem secondSaveALLAsHTMLFullToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem secondSaveAllAsHTMLDetailsOnlyToolStripMenuItem;
     }
 }
 
